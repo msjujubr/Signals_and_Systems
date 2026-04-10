@@ -133,14 +133,11 @@ Cada operação implementada no código gera automaticamente um arquivo .png na 
 
 | Operação               | Descrição                                               |
 |------------------------|---------------------------------------------------------|
-| [`Reversão`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L260)  | Espelhamento do sinal em torno do eixo vertical.Considerando um sinal original definido no intervalo n∈[0,N], o sinal refletido passa a existir no intervalo n∈[−N,0].|
-| [`Mudança de Escala`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L28) | Altera a taxa de amostragem percebida do sinal.   Compressão (quando o fator > 1) Expansão (quando o fator < 1)|
-| [`Mudança de Amplitude`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L8)     | Multiplica cada amostra x[n] por um valor escalar. 
-| [`Deslocamento Temporal`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L265)    | Deslocamento do sinal ao longo do eixo x (x[n-k]). Isso implica que o sinal está atrasado (+k) ou que o sinal está adiantado (-k) |
-| [`Somatório de Sinais`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L265)    | Soma de entre dois sinais. No sistema, realiza a soma ponto a ponto |
-| [`Degrau`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L265)    | Gera um sinal degrau com amplitude definida a partir de um índice inicial |
-| [`Impulso`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L265)    | Gera um impulso discreto em uma posição específica                  |
-
+| [`Reversão`]([https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L260](https://github.com/msjujubr/Signals_and_Systems/blob/71e34cd56583afa65761473f31214b4d42a38eba/src/manipulacao_sinais.cpp#L5))  | Espelhamento do sinal em torno do eixo vertical.Considerando um sinal original definido no intervalo n∈[0,N], o sinal refletido passa a existir no intervalo n∈[−N,0].|
+| [`Mudança de Escala`]([https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L28](https://github.com/msjujubr/Signals_and_Systems/blob/71e34cd56583afa65761473f31214b4d42a38eba/src/manipulacao_sinais.cpp#L20)) | Altera a taxa de amostragem percebida do sinal.   Compressão (quando o fator > 1) Expansão (quando o fator < 1)|
+| [`Mudança de Amplitude`](https://github.com/msjujubr/Signals_and_Systems/blob/55f6a50a6fa1555e82d1331b8a6551396fecce4c/src/manipulacao_sinais.cpp#L44)     | Multiplica cada amostra x[n] por um valor escalar. 
+| [`Deslocamento Temporal`](https://github.com/msjujubr/Signals_and_Systems/blob/55f6a50a6fa1555e82d1331b8a6551396fecce4c/src/manipulacao_sinais.cpp#L58)    | Deslocamento do sinal ao longo do eixo x (x[n-k]). Isso implica que o sinal está atrasado (+k) ou que o sinal está adiantado (-k) |
+| [`Somatório de Sinais`](https://github.com/msjujubr/Signals_and_Systems/blob/55f6a50a6fa1555e82d1331b8a6551396fecce4c/src/manipulacao_sinais.cpp#L73)    | Soma de entre dois sinais. No sistema, realiza a soma ponto a ponto |
 
 As implementações permitem observar propriedades importantes dos sinais:
 
