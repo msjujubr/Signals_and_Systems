@@ -1,8 +1,5 @@
 #include "manipulacao_sinais.hpp"
-#include <iostream>
-#include <vector>
 
-using namespace std;
 
 /*
     CRONOLOGIA:
@@ -84,7 +81,7 @@ void cabecalho_manipulacaoSS() {
             case 1: {
                 Sinal novo = reflexao(sinal);
                 cout << "\nReflexao:\n";
-                plottarSinal(novo);  // Added missing plot
+                plottarSinal(novo);  
                 break;
             }
 
@@ -109,7 +106,7 @@ void cabecalho_manipulacaoSS() {
                 Sinal novo = alteracao_amplitude(sinal, ganho);
 
                 cout << "\nAmplitude:\n";
-                plottarSinal(novo);  // Added missing plot
+                plottarSinal(novo); 
                 break;
             }
 
@@ -121,7 +118,7 @@ void cabecalho_manipulacaoSS() {
                 Sinal novo = deslocamento(sinal, k);
 
                 cout << "\nDeslocamento:\n";
-                plottarSinal(novo);  // Added missing plot
+                plottarSinal(novo); 
                 break;
             }
 
@@ -134,7 +131,7 @@ void cabecalho_manipulacaoSS() {
                 Sinal soma = soma_sinais(sinal, deg);
 
                 cout << "\nSoma com degrau:\n";
-                plottarSinal(soma);  // Added missing plot
+                plottarSinal(soma); 
                 break;
             }
 
@@ -147,6 +144,6 @@ void cabecalho_manipulacaoSS() {
                 break;
         }
         
-        if (opcao == 0) break;  // Exit the while loop when user chooses 0
+        if (opcao == 0) break;  
     }
 }

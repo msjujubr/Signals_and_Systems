@@ -2,10 +2,10 @@
 #include "manipulacao_sinais.hpp" 
 
 Plot_SinaisSistemas::Plot_SinaisSistemas(bool persist) {
-    gp = std::make_unique<Gnuplot>("gnuplot", persist);
+    gp = make_unique<Gnuplot>("gnuplot", persist);
     
     if (!gp->ok()) {
-        std::cerr << "Erro: Nao foi possivel conectar ao Gnuplot!" << std::endl;
+        cerr << "Erro: Nao foi possivel conectar ao Gnuplot!" << endl;
     }
 }
 
@@ -17,8 +17,6 @@ void Plot_SinaisSistemas::plot_discrete(const Sinal& sinal) {
     gp->set_xlabel("n (indice)");
     gp->set_ylabel("Amplitude");
     
-    // A gplot++ lida com os dados automaticamente
-    // Usamos LineStyle::POINTS para sinal discreto
     gp->plot(sinal.indices, sinal.amplitudes, sinal.nome, Gnuplot::LineStyle::POINTS);
     gp->show();
 }
@@ -29,14 +27,12 @@ void Plot_SinaisSistemas::plot_comparison(const Sinal& s1, const Sinal& s2) {
     gp->reset();
     gp->set_title("Comparacao de Sinais");
     
-    // Adiciona as duas séries
     gp->plot(s1.indices, s1.amplitudes, s1.nome, Gnuplot::LineStyle::LINESPOINTS);
     gp->plot(s2.indices, s2.amplitudes, s2.nome, Gnuplot::LineStyle::LINESPOINTS);
     
     gp->show();
 }
 
-// Implementação das funções auxiliares
 void QuickPlot::plot(const Sinal& sinal) {
     Plot_SinaisSistemas sp;
     sp.plot_discrete(sinal);
@@ -45,7 +41,7 @@ void QuickPlot::plot(const Sinal& sinal) {
 
 #include <limits>
 
-void Plot_SinaisSistemas::save_as_png(const Sinal& sinal, const std::string& filename) {
+void Plot_SinaisSistemas::save_as_png(const Sinal& sinal, const string& filename) {
     if (!gp->ok()) return;
 
     gp->reset();
@@ -56,10 +52,10 @@ void Plot_SinaisSistemas::save_as_png(const Sinal& sinal, const std::string& fil
     gp->set_ylabel("Amplitude");
 
 
-    std::vector<double> x_imp;
-    std::vector<double> y_imp;
+    vector<double> x_imp;
+    vector<double> y_imp;
 
-    double nan = std::numeric_limits<double>::quiet_NaN();
+    double nan = numeric_limits<double>::quiet_NaN();
 
     for (size_t i = 0; i < sinal.indices.size(); i++) {
         x_imp.push_back(sinal.indices[i]);
@@ -78,5 +74,5 @@ void Plot_SinaisSistemas::save_as_png(const Sinal& sinal, const std::string& fil
     gp->show();
     gp.reset();
 
-    std::cout << "Gráfico salvo com sucesso em: " << filename << std::endl;
+    cout << "Gráfico salvo com sucesso em: " << filename << endl;
 }

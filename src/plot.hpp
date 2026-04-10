@@ -9,7 +9,7 @@ struct Sinal;
 
 class Plot_SinaisSistemas {
 private:
-    std::unique_ptr<Gnuplot> gp;
+    unique_ptr<Gnuplot> gp;
     
 public:
     Plot_SinaisSistemas(bool persist = true);
@@ -21,7 +21,7 @@ public:
     void plot_comparison(const Sinal& s1, const Sinal& s2);
 
     // Salva o sinal em um arquivo PNG
-    void save_as_png(const Sinal& sinal, const std::string& filename);
+    void save_as_png(const Sinal& sinal, const string& filename);
 };
 
 namespace QuickPlot {
