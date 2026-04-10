@@ -17,37 +17,20 @@ Sinal reflexao(const Sinal& sinal) {
 }
 
 // b) Mudanca de Escala: y[n] = x[an]
-Sinal mudanca_escala(const Sinal& sinal, int fator) {
-    Sinal resultado;
-    resultado.nome = "Escala (a=" + to_string(fator) + ") - " + sinal.nome;
-
-    for (size_t i = 0; i < sinal.indices.size(); ++i) {
-        resultado.indices.push_back(sinal.indices[i] / fator);
-        resultado.amplitudes.push_back(sinal.amplitudes[i]);
-    }
-
-    return resultado;
-}
-
-// b) Mudanca de Escala: y[n] = x[an]
-Sinal mudanca_escala(const Sinal& sinal, double fator) { // Alterado para double
+Sinal mudanca_escala(const Sinal& sinal, double fator) {
     if (fator == 0) return sinal;
 
     Sinal resultado;
     resultado.nome = "Escala (a=" + to_string(fator) + ") - " + sinal.nome;
 
-    // Encontramos os limites do novo domínio
     int min_n = static_cast<int>(floor(*min_element(sinal.indices.begin(), sinal.indices.end()) / fator));
     int max_n = static_cast<int>(ceil(*max_element(sinal.indices.begin(), sinal.indices.end()) / fator));
 
-    // Percorremos o novo eixo 'n'
     for (int n = min_n; n <= max_n; ++n) {
-        // Na teoria: y[n] = x[n * fator]
         double busca_original = n * fator;
 
-        // Verificamos se 'n * fator' era um índice inteiro no sinal original
         for (size_t i = 0; i < sinal.indices.size(); ++i) {
-            if (abs(sinal.indices[i] - busca_original) < 1e-9) { // Comparação de double
+            if (abs(sinal.indices[i] - busca_original) < 1e-9) {
                 resultado.indices.push_back(n);
                 resultado.amplitudes.push_back(sinal.amplitudes[i]);
             }
