@@ -118,21 +118,6 @@ Sinal degrau(int tamanho, double amplitude, int inicio) {
     return resultado;
 }
 
-// Gerar sinal impulso: δ[n]
-Sinal impulso(int tamanho, int posicao, double amplitude) {
-    Sinal resultado;
-    resultado.nome = "Impulso (Posicao = " + to_string(posicao) + ")";
-    resultado.indices = criar_indices(0, tamanho - 1);
-    resultado.amplitudes.assign(tamanho, 0.0);
-    
-    if (posicao >= 0 && posicao < tamanho) {
-        resultado.amplitudes[posicao] = amplitude;
-    }
-    
-    return resultado;
-}
-
-
 
 // Funcao para criar um vetor de indices
 vector<int> criar_indices(int inicio, int fim) {
