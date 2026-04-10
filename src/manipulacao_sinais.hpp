@@ -24,7 +24,6 @@ Sinal alteracao_amplitude(const Sinal& sinal, double ganho);
 Sinal deslocamento(const Sinal& sinal, int k);
 Sinal soma_sinais(const Sinal& sinal1, const Sinal& sinal2);
 Sinal degrau(int tamanho, double amplitude, int inicio = 0);
-Sinal impulso(int tamanho, int posicao, double amplitude = 1.0);
 
 
 // Funcoes auxiliares
