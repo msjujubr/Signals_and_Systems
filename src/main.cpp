@@ -89,7 +89,7 @@ void cabecalho_manipulacaoSS() {
             }
 
             case 2: {
-                int fator;
+                double fator;
                 cout << "Fator de escala: ";
                 cin >> fator;
 

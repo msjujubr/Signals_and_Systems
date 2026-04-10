@@ -19,7 +19,7 @@ struct Sinal {
 
 // Operacoes basicas com sinais
 Sinal reflexao(const Sinal& sinal);
-Sinal mudanca_escala(const Sinal& sinal, int fator);
+Sinal mudanca_escala(const Sinal& sinal, double fator);
 Sinal alteracao_amplitude(const Sinal& sinal, double ganho);
 Sinal deslocamento(const Sinal& sinal, int k);
 Sinal soma_sinais(const Sinal& sinal1, const Sinal& sinal2);
