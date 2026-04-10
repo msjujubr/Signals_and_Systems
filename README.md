@@ -104,7 +104,7 @@ A biblioteca `gplot++` é *header-only*, ou seja, não requer instalação compl
 
 Antes de executar o projeto, é necessário ter o **Gnuplot** instalado e disponível no `PATH` do sistema. No Linux, pode ser instalado via gerenciador de pacotes:
 
-                            sudo apt-get install gnuplot
+                                                 sudo apt-get install gnuplot
 
 - O Gnuplot deve estar corretamente configurado no `PATH`, caso contrário os gráficos não serão gerados
 - Cada execução gera arquivos únicos (com timestamp) na pasta `graphs/`
@@ -134,7 +134,7 @@ Cada operação implementada no código gera automaticamente um arquivo .png na 
 | Operação               | Descrição                                               |
 |------------------------|---------------------------------------------------------|
 | [`Reversão`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L260)  | Espelhamento do sinal em torno do eixo vertical.Considerando um sinal original definido no intervalo n∈[0,N], o sinal refletido passa a existir no intervalo n∈[−N,0].|
-| [`Mudança de Escala`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L28) | Altera a taxa de amostragem percebida do sinal.  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   Compressão (quando o fator > 1)&nbsp;&nbsp;&nbsp; Expansão (quando o fator < 1)|
+| [`Mudança de Escala`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L28) | Altera a taxa de amostragem percebida do sinal.   Compressão (quando o fator > 1) Expansão (quando o fator < 1)|
 | [`Mudança de Amplitude`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L8)     | Multiplica cada amostra x[n] por um valor escalar. 
 | [`Deslocamento Temporal`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L265)    | Deslocamento do sinal ao longo do eixo x (x[n-k]). Isso implica que o sinal está atrasado (+k) ou que o sinal está adiantado (-k) |
 | [`Somatório de Sinais`](https://github.com/msjujubr/Atividade01/blob/main/src/config.cpp#L265)    | Soma de entre dois sinais. No sistema, realiza a soma ponto a ponto |
