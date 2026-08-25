@@ -1,0 +1,20 @@
+# Ambientes virtuais e compilação
+.venv/
+venv/
+env/
+build/
+dist/
+
+# Dados e gráficos gerados por código
+data/*.png
+
+# IDEs e Sistema Operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Dependências
+node_modules/
+req.txt
+*.log
