@@ -1,6 +1,7 @@
 # Sinais e Sistemas (Estudos)
 
 ![C++](https://img.shields.io/badge/Linguagem-C++-green.svg)
+![Python](https://img.shields.io/badge/Linguagem-Python-green.svg)
 ![Make](https://img.shields.io/badge/Compilacao-Make-orange)
 ![VSCode](https://img.shields.io/badge/IDE-VSCode-informational)
 ![ISO](https://img.shields.io/badge/ISO-Linux-blueviolet)
