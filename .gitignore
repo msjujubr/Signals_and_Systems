@@ -16,5 +16,4 @@ Thumbs.db
 
 # Dependências
 node_modules/
-req.txt
 *.log
