@@ -13,9 +13,7 @@ plt.rcParams.update({
     'figure.autolayout': True
 })
 
-# ==============================================================================
-# SEÇÃO 1: Sistema Tipo 0 sob Entrada Degrau - Comparação de Ganhos (K=10 vs K=100)
-# ==============================================================================
+
 print("--- 1. Sistema Tipo 0 (Degrau) ---")
 
 # Definição dos Vetores de Tempo
@@ -65,13 +63,10 @@ ax2.set_ylabel('Erro $e(t)$')
 ax2.grid(True, linestyle=':', alpha=0.7)
 ax2.legend(loc='upper right')
 
-plt.savefig('simulacao_tipo0_ganhos.png', dpi=300)
+plt.savefig('data/simulacao_tipo0_ganhos.png', dpi=300)
 plt.close()
 
 
-# ==============================================================================
-# SEÇÃO 2: Sistema Tipo 0 sob Entrada Rampa (K=10)
-# ==============================================================================
 print("--- 2. Sistema Tipo 0 (Rampa) ---")
 
 # Ajuste do tempo para visualização da divergência do erro
@@ -100,13 +95,10 @@ ax2.set_ylabel('Erro $e(t)$')
 ax2.grid(True, linestyle=':', alpha=0.7)
 ax2.legend(loc='upper left')
 
-plt.savefig('simulacao_tipo0_rampa.png', dpi=300)
+plt.savefig('data/simulacao_tipo0_rampa.png', dpi=300)
 plt.close()
 
 
-# ==============================================================================
-# SEÇÃO 3: Sistema Elevado para Tipo 1 (Degrau e Rampa)
-# ==============================================================================
 print("--- 3. Sistema Tipo 1 (Degrau e Rampa) ---")
 
 # G1(s) = 10 / (s^2 + 2s) -> T1(s) = 10 / (s^2 + 2s + 10)
@@ -162,7 +154,7 @@ axes[1, 1].set_xlabel('Tempo (s)')
 axes[1, 1].grid(True, linestyle=':', alpha=0.7)
 axes[1, 1].legend()
 
-plt.savefig('simulacao_tipo1_degrau_rampa.png', dpi=300)
+plt.savefig('data/simulacao_tipo1_degrau_rampa.png', dpi=300)
 plt.close()
 
 print("Simulações concluídas e gráficos salvos com sucesso!")
