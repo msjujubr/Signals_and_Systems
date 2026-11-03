@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+import control as ct
 
 output_dir = "data"
 os.makedirs(output_dir, exist_ok=True)
@@ -255,3 +256,6 @@ print(f"  G2(s) = {k2_corrigido:.4f}s / ""(s² + 50s + 10000)")
 
 print("\nObjetivo:")
 print("  Duas faixas de passagem acima de -3 dB.")
+
+
+ct.Bode(G1)
